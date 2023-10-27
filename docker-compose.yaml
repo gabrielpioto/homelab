@@ -39,3 +39,15 @@ services:
     command: tunnel run raspberry
     restart: unless-stopped
     network_mode: host
+
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: code-server
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - /media/HD-E1/rpi/configs/code-server:/config
+    ports:
+      - 8443:8443
+    restart: unless-stopped
