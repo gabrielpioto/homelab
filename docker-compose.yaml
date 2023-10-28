@@ -49,6 +49,7 @@ services:
       - DOCKER_MODS=linuxserver/mods:universal-docker
     volumes:
       - /media/HD-E1/rpi/configs/code-server:/config
+      - /var/run/docker.sock:/var/run/docker.sock:ro
     ports:
       - 8443:8443
     restart: unless-stopped
