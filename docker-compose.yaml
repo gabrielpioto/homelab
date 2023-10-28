@@ -46,6 +46,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
+      - DOCKER_MODS=linuxserver/mods:universal-docker
     volumes:
       - /media/HD-E1/rpi/configs/code-server:/config
     ports:
