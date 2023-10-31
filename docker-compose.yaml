@@ -46,10 +46,9 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - DOCKER_MODS=linuxserver/mods:universal-docker
+      - DOCKER_MODS=linuxserver/mods:universal-docker-in-docker
     volumes:
       - /media/HD-E1/rpi/configs/code-server:/config
-      - /var/run/docker.sock:/var/run/docker.sock:ro
     ports:
       - 8443:8443
     restart: unless-stopped
