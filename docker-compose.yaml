@@ -43,6 +43,7 @@ services:
   code-server:
     image: lscr.io/linuxserver/code-server:latest
     container_name: code-server
+    privileged: true
     environment:
       - PUID=1000
       - PGID=1000
